@@ -35,7 +35,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/candidate', candidateRoutes);
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = 3000;
 
 
 app.listen(PORT, () => {
