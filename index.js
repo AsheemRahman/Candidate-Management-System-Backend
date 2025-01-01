@@ -12,17 +12,9 @@ dotenv.config();
 
 const app = express();
 
-const corsOptions = {
-    origin: 'https://candidate-management-system-frontend.vercel.app/',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-};
-
-
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions));
+app.use(cors({ origin: '*' }));
 
 mongoose
     .connect(process.env.MONGO_URI)
